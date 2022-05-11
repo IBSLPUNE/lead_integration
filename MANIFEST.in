@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lead_integration *.css
+recursive-include lead_integration *.csv
+recursive-include lead_integration *.html
+recursive-include lead_integration *.ico
+recursive-include lead_integration *.js
+recursive-include lead_integration *.json
+recursive-include lead_integration *.md
+recursive-include lead_integration *.png
+recursive-include lead_integration *.py
+recursive-include lead_integration *.svg
+recursive-include lead_integration *.txt
+recursive-exclude lead_integration *.pyc
