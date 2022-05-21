@@ -105,24 +105,19 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+#  	"Lead Integration": {
+#  		"on_update": "lead_integration.lead_integration.lead.generate",
+# 	}
+#  }
 
-# Scheduled Tasks
-# ---------------
+ # Scheduled Tasks
+ # ---------------
 
 # scheduler_events = {
-# 	"all": [
-# 		"lead_integration.tasks.all"
-# 	],
-# 	"daily": [
-# 		"lead_integration.tasks.daily"
-# 	],
 # 	"hourly": [
+# 		"lead_integration.lead_integration.doctype.lead_integration.lead_integration.generate"
+# ]
+# 	"daily": [
 # 		"lead_integration.tasks.hourly"
 # 	],
 # 	"weekly": [
@@ -131,8 +126,14 @@ app_license = "MIT"
 # 	"monthly": [
 # 		"lead_integration.tasks.monthly"
 # 	],
-# }
-
+#}
+scheduler_events = {
+	"cron": {
+       		"0/20 * * * *": [
+            		"lead_integration.lead_integration.lead.generate"
+        		]
+		}
+}
 # Testing
 # -------
 
@@ -187,4 +188,3 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"lead_integration.auth.validate"
 # ]
-

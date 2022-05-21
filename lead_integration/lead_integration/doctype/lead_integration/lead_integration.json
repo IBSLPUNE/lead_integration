@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-05-11 14:14:59.462961",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "integration_for",
+  "indiamart_url",
+  "sync_start"
+ ],
+ "fields": [
+  {
+   "fieldname": "integration_for",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Integration For",
+   "options": "\nIndiaMart",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.integration_for == 'IndiaMart'",
+   "fieldname": "indiamart_url",
+   "fieldtype": "Data",
+   "label": "IndiaMart URL",
+   "length": 1000
+  },
+  {
+   "fieldname": "sync_start",
+   "fieldtype": "Button",
+   "label": "Sync Start"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-20 12:13:29.807316",
+ "modified_by": "Administrator",
+ "module": "Lead Integration",
+ "name": "Lead Integration",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
